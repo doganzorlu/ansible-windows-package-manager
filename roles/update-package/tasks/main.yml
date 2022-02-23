@@ -1,0 +1,5 @@
+- name: Update packages
+  win_chocolatey:
+    name: "{{ item }}"
+    state: latest
+  loop: "{{ apps | d('all') }}"

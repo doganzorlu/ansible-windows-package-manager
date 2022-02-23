@@ -1,0 +1,9 @@
+---
+- name: Add packages [{{ apps | join(', ')}}]
+  win_chocolatey:
+    name: "{{ item }}"
+    state: present
+    ignore_checksums: "{{ ignore_checksums | default('no') }}"
+  when: apps is defined
+  loop: "{{ apps }}"
+  

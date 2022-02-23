@@ -1,0 +1,14 @@
+#
+# Parameters:
+# op: operation (install, remove, update)
+# apps: applications (list of packages)
+# ignore_checksums: yes/no
+# 
+
+---
+- name: Package Manager
+  hosts: clients
+  roles:
+    - { role: add-new-package, when: op == 'install' and apps is defined }
+    - { role: update-package, when: op == 'update' and apps is defined }
+    - { role: remove-package, when: op == 'remove' and apps is defined }

@@ -1,0 +1,8 @@
+---
+- name: Remove packages [{{ apps | join(', ')}}]
+  win_chocolatey:
+    name: "{{ item }}"
+    state: absent
+  when: apps is defined
+  loop: "{{ apps }}"
+  

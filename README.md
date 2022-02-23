@@ -1,6 +1,6 @@
 # README
 
-This playbook is developed for automatic software distribution on the client machines are defined in inventory.yml. To do this task succesfuly, using "Windows Remote Management Service". So the client computers must accept this connection (WinRM:5985). It is used to chocolatey package manager on endpoints to manage softwares and ansible for the remote administration.
+This playbook is developed for automatic software distribution on the client machines defined in inventory.yml. To do this task succesfuly, using "Windows Remote Management Service". So the client computers must accept this connection (WinRM:5985). It is used to chocolatey package manager on endpoints to manage softwares and ansible for the remote administration.
 
 ## Prepare Windows Machines
 
